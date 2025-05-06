@@ -5,24 +5,25 @@ pipeline {
         stage('Clone') {
             steps {
                 echo 'Cloning repo...'
+                // Git is already handled by default in Declarative Pipeline
             }
         }
 
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
 
         stage('Run App') {
             steps {
-                sh 'node app.js &'
+                bat 'npm start'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'npm test'
+                echo 'No tests defined yet.'
             }
         }
     }
