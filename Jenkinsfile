@@ -5,7 +5,6 @@ pipeline {
         stage('Clone') {
             steps {
                 echo 'Cloning repo...'
-                // Git is already handled by default in Declarative Pipeline
             }
         }
 
